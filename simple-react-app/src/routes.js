@@ -10,7 +10,6 @@ export const routes = [
   {
     path: '/users/:userId',
     component: UserPage,
-    exact: true,
   },
   {
     component: () => null,

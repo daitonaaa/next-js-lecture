@@ -12,7 +12,7 @@ const Users = (props) => {
   )
 };
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (ctx) => {
   const users = await fetch('http://localhost:9000/users').then(r => r.json());
   return {
     props: {

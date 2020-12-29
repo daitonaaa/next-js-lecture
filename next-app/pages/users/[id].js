@@ -1,8 +1,18 @@
 import React from 'react';
+import Link from 'next/link';
 import {User} from "../../User";
 
 const UserPage = ({ user }) => {
-  return User({ user });
+  return (
+    <div>
+      <User user={user} />
+      <Link href="/users">
+        <a>
+          go back
+        </a>
+      </Link>
+    </div>
+  );
 };
 
 export const getServerSideProps = async (ctx) => {
